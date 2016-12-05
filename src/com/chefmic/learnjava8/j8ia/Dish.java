@@ -1,4 +1,4 @@
-package com.chefmic.learnjava8.j8ia.chapter4;
+package com.chefmic.learnjava8.j8ia;
 
 /**
  * Created by chenyuan on 12/4/16.
