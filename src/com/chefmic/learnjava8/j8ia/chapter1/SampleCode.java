@@ -1,6 +1,6 @@
 package com.chefmic.learnjava8.j8ia.chapter1;
 
-import com.chefmic.learnjava8.j8ia.Apple;
+import com.chefmic.learnjava8.j8ia.object.Apple;
 
 import java.io.File;
 import java.io.FileFilter;

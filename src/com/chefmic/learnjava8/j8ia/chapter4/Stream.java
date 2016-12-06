@@ -1,6 +1,6 @@
 package com.chefmic.learnjava8.j8ia.chapter4;
 
-import com.chefmic.learnjava8.j8ia.Dish;
+import com.chefmic.learnjava8.j8ia.object.Dish;
 
 import java.util.*;
 import java.util.stream.Collectors;

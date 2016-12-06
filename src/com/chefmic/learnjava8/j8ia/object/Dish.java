@@ -1,9 +1,11 @@
-package com.chefmic.learnjava8.j8ia;
+package com.chefmic.learnjava8.j8ia.object;
 
 /**
  * Created by chenyuan on 12/4/16.
  */
 public class Dish {
+
+    public enum CaloricLevel { Low, Normal, High }
 
     private final String name;
     private final int calories;

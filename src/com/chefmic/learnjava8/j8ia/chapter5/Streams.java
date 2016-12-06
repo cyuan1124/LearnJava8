@@ -1,6 +1,8 @@
 package com.chefmic.learnjava8.j8ia.chapter5;
 
-import com.chefmic.learnjava8.j8ia.Dish;
+import com.chefmic.learnjava8.j8ia.object.Dish;
+import com.chefmic.learnjava8.j8ia.object.Trader;
+import com.chefmic.learnjava8.j8ia.object.Transaction;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -106,11 +108,11 @@ public class Streams {
         List<Trader> traders = Arrays.asList(a, b, c, d);
 
         List<Transaction> transactions = Arrays.asList(
-                new Transaction(a, 2016, 150),
-                new Transaction(b, 2015, 700),
-                new Transaction(c, 2011, 123),
-                new Transaction(d, 2014, 430),
-                new Transaction(d, 2013, 500)
+                new Transaction(a, 2016, 150, null),
+                new Transaction(b, 2015, 700, null),
+                new Transaction(c, 2011, 123, null),
+                new Transaction(d, 2014, 430, null),
+                new Transaction(d, 2013, 500, null)
         );
 
         //All transaction in 2011, sorted by value

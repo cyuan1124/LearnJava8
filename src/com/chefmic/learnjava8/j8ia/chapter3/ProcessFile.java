@@ -1,6 +1,6 @@
 package com.chefmic.learnjava8.j8ia.chapter3;
 
-import com.chefmic.learnjava8.j8ia.Apple;
+import com.chefmic.learnjava8.j8ia.object.Apple;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
