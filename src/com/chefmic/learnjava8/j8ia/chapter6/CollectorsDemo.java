@@ -5,6 +5,7 @@ import com.chefmic.learnjava8.j8ia.object.Dish;
 import com.chefmic.learnjava8.j8ia.object.Transaction;
 
 import java.util.*;
+import java.util.function.Predicate;
 import java.util.stream.IntStream;
 
 import static java.util.stream.Collectors.*;
@@ -123,6 +124,22 @@ public class CollectorsDemo {
 
     public Map<Boolean, List<Integer>> partitionInteger(int n) {
         return IntStream.range(2, n).boxed().collect(partitioningBy(i -> isPrime(n)));
+    }
+
+    public static boolean isPrime(List<Integer> primes, int candidate) {
+        return takeWhile(primes, i -> i <= (int) Math.sqrt(candidate)).stream().noneMatch(p -> candidate % p == 0);
+
+    }
+
+    public static<A> List<A> takeWhile(List<A> list, Predicate<A> p) {
+        int i = 0;
+        for (A item : list) {
+            if (!p.test(item)) {
+                return list.subList(0, i);
+            }
+            i++;
+        }
+        return list;
     }
 
 }
