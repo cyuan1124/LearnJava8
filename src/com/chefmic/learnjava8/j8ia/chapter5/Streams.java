@@ -3,7 +3,6 @@ package com.chefmic.learnjava8.j8ia.chapter5;
 import com.chefmic.learnjava8.j8ia.object.Dish;
 import com.chefmic.learnjava8.j8ia.object.Trader;
 import com.chefmic.learnjava8.j8ia.object.Transaction;
-import org.junit.Test;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -90,7 +89,6 @@ public class Streams {
     /**
      * 5.4 Reduce and fold
      */
-    @Test
     public void reduceAndFold() {
         int sum = Arrays.asList(1, 3, 5, 7, 9).stream().reduce(0, Integer::sum);
         System.out.println(sum);

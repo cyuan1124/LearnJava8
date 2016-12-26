@@ -1,11 +1,19 @@
 package com.chefmic.learnjava8.j8ia.chapter7;
 
+import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveTask;
+import java.util.stream.LongStream;
 
 /**
  * Created by chenyuan on 12/18/16.
  */
 public class ForkJoinSumCalculator extends RecursiveTask<Long> {
+
+    public static void main(String[] args) {
+        long[] numbers = LongStream.rangeClosed(1, 500).toArray();
+        ForkJoinSumCalculator task = new ForkJoinSumCalculator(numbers);
+        System.out.println(new ForkJoinPool().invoke(task));
+    }
 
     public static final long THRESHOLD = 10_000;
     private final long[] numbers;

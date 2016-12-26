@@ -1,5 +1,7 @@
 package com.chefmic.learnjava8.j8ia.chapter7;
 
+import java.util.stream.Stream;
+
 /**
  * Created by chenyuan on 12/18/16.
  */
@@ -49,6 +51,12 @@ public class WordCounter {
 
     public int getCounter() {
         return counter;
+    }
+
+    private int countWords(Stream<Character> stream) {
+        WordCounter wordCounter = stream.reduce(new WordCounter(0, true),
+                WordCounter::accumulate, WordCounter::combine);
+        return wordCounter.getCounter();
     }
 
 }
